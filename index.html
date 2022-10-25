@@ -29,30 +29,33 @@
         <div class="col col-md-8 mr-md-auto ml-md-auto" >
           <div id="contenido">
             <header>
-              <h1 class="text-center">Cotizá tu seguro de Automotor</h1>
+              <h1 id= "CotizadorDeSeguros" class="text-center">Cotizá el seguro de tu Auto</h1>
             </header>
             <div class="row-contenido-formulario">
               <div class="col col-md-12 mr-md-auto ml-md-auto">
                 <form action="#" id="cotizar-seguro">
                   <div class="form-group">
                     <label for="anio">Nombre y Apellido:</label>
-                    <input class="form-control" id="anio"></input>
+                    <input class="form-control" id="name"></input>
                   </div>
                   <div class="form-group">
                     <label for="anio">DNI:</label>
-                    <input class="form-control" id="anio"></input>
+                    <input class="form-control" id="dni"></input>
                   </div>
                   <div class="form-group">
                     <label for="anio">Fecha de Nacimiento:</label>
-                    <input class="form-control" id="anio"></input>
+                    <input class="form-control" id="bday"></input>
                   </div>
                   <div class="form-group">
-                    <label for="marca">Tipo de vehículo</label>
-                    <select class="form-control" id="marca">
-                      <option value="">- Seleccionar -</option>
-                      <option value="1">Nacional</option>
-                      <option value="2">Importado</option>
-                      <option value="3">Camión</option>
+                    <label for="marca">Marca:</label>
+                    <select class="form-control" id="brand">
+                      <!--<option id="selectBrand" value="">- Seleccionar -</option>
+                      <option id="selectBrand" value="">Toyota</option>
+                      <option id="selectBrand" value="">Volkswagen</option>
+                      <option id="selectBrand" value="">Ford</option>
+                      <option id="selectBrand" value="">Chevrolet</option>
+                      <option id="selectBrand" value="">Renault</option>
+                      <option id="selectBrand" value="">Audi</option>  -->
                     </select>
                   </div>
                   <div class="form-group">
@@ -66,35 +69,40 @@
                         <div class="form-check">
                           <label class="form-check-label">
                             <input class="form-check-input" type="radio" name="tipo" value="basico" checked>
-                            Responsabilidad Civil + Grúa
+                            Responsabilidad Civil
                           </label>
                         </div>
                         <div class="form-check">
                           <label class="form-check-label">
                             <input class="form-check-input" type="radio" name="tipo" value="completo">
-                            CFull Terceros Completos
+                            Terceros Completos
                           </label>
                         </div>
                         <div class="form-check">
                         <label class="form-check-label">
                           <input class="form-check-input" type="radio" name="tipo" value="completo">
-                          Todo Riesgo con Franquicias
+                          Todo Riesgo
                         </label>
                         </div>
                       </div>
                     </div>
                   </fieldset>
                   <div id="cargando">
-                      <img src="img/spinner.gif">
+                      <img src="images/spinner.gif">
                   </div>
                   <div id="resultado"></div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-raised btn-primary">Cotizar
+                    <button type="submit" id="botonCotizar" class="btn btn-raised btn-primary">Cotizar
                     </button>
                   </div>
+                  <div id="costoDelSeguro"></div>
                 </form> 
               </div>
             </div>
+            <div id="cotizarNuevoSeguro">
+              <p></p>
+            </div>
+            <p id="gracias"></p>
           </div>
         </div>
       </div>

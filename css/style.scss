@@ -4,17 +4,53 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
+
 .btn.btn-raised.btn-primary {
-    background-color: #0054a0!important;
+    background-color: #00838F!important;
     font-size: 20px;
     font-weight: bold;
     width: 100%;
     padding: 15px;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+#costoDelSeguro{
+    margin-bottom: 5%;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#gracias{
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: #00838F;
+    font-weight: bolder;
+}
+
+#resumenDatos{
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    color:black;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#costoSeguro{
+    background-color:#26C6DA;
+    padding: 15px;
+    font-size: 22px;
+    display: inline;
+    color: white;
+    font-weight: 600;
 }
 
 header {
-    background-color:#0054a0;
+    background-color:#26C6DA;
     padding: 20px;
     text-transform: uppercase;
     font-weight: bolder;
@@ -57,8 +93,8 @@ label{
 }
 
 button{
-   margin-bottom: 0px;
-   
+    margin-bottom: 0px;
+    
 }
 
 .error {
@@ -87,7 +123,7 @@ button{
     -moz-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
     box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
     width: auto;
-   border-radius: 20px;
+    border-radius: 20px;
 }
 header{
     border-top-left-radius: 20px;
@@ -107,7 +143,7 @@ header{
     margin-bottom: 40px;
 }
 #resultado div {
-    border: 1px solid #0054a0;
+    border: 1px solid #26C6DA;
     text-align: center;
     padding: 0  0 20px 0;
 }
@@ -115,10 +151,14 @@ header{
     margin-bottom: 0;
 }
 #resultado div p.header {
-    background-color: #0054a0;
+    background-color: #26C6DA;
     margin-bottom: 10px;
     color:white;
     padding: 10px;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.estilosColor{
+    background-color: aquamarine;
 }
