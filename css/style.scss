@@ -4,8 +4,7 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-
-.btn.btn-raised.btn-primary {
+#botonCotizar {
     background-color: #0054a0!important;
     font-size: 20px;
     font-weight: bold;
@@ -14,6 +13,38 @@ background-size: cover;
     text-align: center;
     margin-bottom: 20px;
 }
+
+#botonEmitir{
+    background-color: #35682D;
+    color: white;
+    border-color: #35682D;
+    font-size: 20px;
+    font-weight: bold;
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 24%;
+}
+
+#botonCompanies{
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    background-color:#00838F;
+    color: white;
+    font-weight: bold;
+    
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+#companiesJson{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 
 #costoDelSeguro{
     margin-bottom: 5%;
@@ -49,6 +80,8 @@ background-size: cover;
     font-weight: 600;
 }
 
+
+
 header {
     background-color:#0054a0;
     padding: 20px;
@@ -57,7 +90,6 @@ header {
     color: white;
     text-align: center;
 }
-
 header h1 {
     font-size: 30px;
     margin:0;

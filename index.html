@@ -24,27 +24,29 @@
   </head>
   <body>
     <!--Menú de cotizador-->
+    <div id="companies"></div>
+
     <div class="container">
       <div class="row">
         <div class="col col-md-8 mr-md-auto ml-md-auto" >
           <div id="contenido">
             <header>
-              <h1 id= "CotizadorDeSeguros" class="text-center">Cotizá el seguro de tu Auto</h1>
+            <h1 id="CotizadorDeSeguros" class="text-center">Cotizá tu seguro de Auto</h1>
             </header>
             <div class="row-contenido-formulario">
               <div class="col col-md-12 mr-md-auto ml-md-auto">
-                <form action="#" id="cotizar-seguro">
+                <form id="formulario" action="#" id="cotizar-seguro" >
                   <div class="form-group">
                     <label for="anio">Nombre y Apellido:</label>
-                    <input class="form-control" id="name"></input>
+                    <input type="text" class="form-control" id="name" required>
                   </div>
                   <div class="form-group">
                     <label for="anio">DNI:</label>
-                    <input class="form-control" id="dni"></input>
+                    <input class="form-control" id="dni" required>
                   </div>
                   <div class="form-group">
-                    <label for="anio">Fecha de Nacimiento:</label>
-                    <input class="form-control" id="bday"></input>
+                    <label for="anio">Año de Nacimiento:</label>
+                    <input class="form-control" id="bday" required>
                   </div>
                   <div class="form-group">
                     <label for="marca">Marca:</label>
@@ -55,62 +57,89 @@
                       <option id="selectBrand" value="">Ford</option>
                       <option id="selectBrand" value="">Chevrolet</option>
                       <option id="selectBrand" value="">Renault</option>
-                      <option id="selectBrand" value="">Audi</option>  -->
+                      <option id="selectBrand" value="">Audi</option>  -->                      
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="anio">Año:</label>
-                    <input class="form-control" id="anio"></input>
+                    <input class="form-control" id="anio" required>
                   </div>
-                  <fieldset class="form-group">
+                  <div class="form-group">
+                    <label for="marca">Tipo de Seguro:</label>
+                    <select class="form-control" id="typeS">
+                      <!--<option id="selectBrand" value="">- Seleccionar -</option>
+                      <option id="selectBrand" value="">Toyota</option>
+                      <option id="selectBrand" value="">Volkswagen</option>
+                      <option id="selectBrand" value="">Ford</option>
+                      <option id="selectBrand" value="">Chevrolet</option>
+                      <option id="selectBrand" value="">Renault</option>
+                      <option id="selectBrand" value="">Audi</option>-->                      
+                    </select>
+                  </div>
+                  <!--<fieldset class="form-group">
                     <div class="row">
-                      <legend class="col-form-legend col-12">Tipo de cobertura</legend>
-                      <div class="col12">
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="tipo" value="basico" checked>
-                            Responsabilidad Civil
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="tipo" value="completo">
-                            Terceros Completos
-                          </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="radio" name="tipo" value="completo">
+                      <legend class="col-form-legend col-12">Tipo Seguro</legend>
+                      <div  class="col12">
+                        <p>
+                        <label  >
+                          <input id="clase" type="radio" name="tipo" value="Responsabilidad Civil" checked>
+                          Responsabilidad Civil
+                        </label>
+                        </p>
+                        <p>
+                        <label >
+                          <input id="clase" type="radio" name="tipo" value="Terceros Completos">
+                          Terceros Completos
+                        </label>
+                        </p>
+                        <p>
+                        <label >
+                          <input id="clase" type="radio" name="tipo" value="Todo Riesgo">
                           Todo Riesgo
                         </label>
-                        </div>
+                        </p>
                       </div>
                     </div>
-                  </fieldset>
+                  </fieldset>-->
                   <div id="cargando">
-                      <img src="images/spinner.gif">
+                    <img src="img/spinner.gif">
                   </div>
                   <div id="resultado"></div>
                   <div class="form-group">
                     <button type="submit" id="botonCotizar" class="btn btn-raised btn-primary">Cotizar
                     </button>
                   </div>
-                  <div id="costoDelSeguro"></div>
+                  <div id="costoDelSeguro"></div> 
                 </form> 
+
+                <div id="emitirSeguro"></div>
               </div>
             </div>
             <div id="cotizarNuevoSeguro">
-              <p></p>
+            <p></p>
             </div>
             <p id="gracias"></p>
+            <div class="container">
+              <div class="section">
+                <button id="botonCompanies" class="button">Compañias con las que trabajamos</button>
+                <div>
+                  <table id="companiesJson" class="table"></table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-        
+    
     <!--Bootstrap JS-->
+    <script src="data.json"></script>
     <script src="js-bs/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>"https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"</script>
 
     <!-- Link archivo Javascript-->
     <script src="JS/script.js"></script> 
